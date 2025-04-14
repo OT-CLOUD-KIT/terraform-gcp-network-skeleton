@@ -8,9 +8,10 @@
 This Terraform configuration provisions a Shared VPC setup with configurable subnets, VPC flow logs, Cloud Router, and Cloud NAT. It also supports secondary IP ranges, static NAT IP allocation, and attaches service projects to the shared VPC for centralized network management.
 
 
+
 ## Architecture
 
-<img width="600" length="800" alt="Terraform" src="https://github.com/user-attachments/assets/22a28392-0bb2-47c9-802e-99ec9a9f7246">
+<img width="800" length="800" alt="Terraform" src="https://github.com/user-attachments/assets/e10845bd-334f-4ac2-8663-5c59297695dc">
 
 ## Providers
 
