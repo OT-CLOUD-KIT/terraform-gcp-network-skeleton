@@ -15,12 +15,12 @@ output "subnet_ids" {
 
 output "host_project_id" {
   description = "ID of host project"
-  value       = google_compute_shared_vpc_host_project.host.project
+  value       = var.enable_shared_vpc ? google_compute_shared_vpc_host_project.host[0].project : null
 }
 
 output "attached_service_projects" {
   description = "ID of the service projects"
-  value       = [for p in google_compute_shared_vpc_service_project.service : p.service_project]
+  value       = var.enable_shared_vpc ? [for p in google_compute_shared_vpc_service_project.service : p.service_project] : []
 }
 
 output "cloud_routers" {

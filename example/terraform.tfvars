@@ -1,3 +1,5 @@
+region = "us-central1"
+
 project_id = "nw-opstree-dev-landing-zone"
 
 vpc_name = "network-vpc"
@@ -32,6 +34,8 @@ aggregation_interval = "INTERVAL_5_SEC"
 flow_sampling = "0.5"
 
 metadata = "INCLUDE_ALL_METADATA"
+
+enable_shared_vpc = false
 
 service_projects = ["service-project-testing", "service-project-testing-2"]
 

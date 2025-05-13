@@ -48,6 +48,12 @@ variable "metadata" {
   default     = "INCLUDE_ALL_METADATA"
 }
 
+variable "enable_shared_vpc" {
+  description = "Enable shared VPC configuration"
+  type        = bool
+  default     = false
+}
+
 variable "service_projects" {
   description = "List of service projects to attach"
   type        = list(string)
