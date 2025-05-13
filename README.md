@@ -122,7 +122,8 @@ nats = [
 |**subnets** | List of subnets with optional secondary IP ranges | list(object) | 1000 | yes|
 |**aggregation_interval**| Time interval for aggregating flow logs | string | "INTERVAL_5_SEC" | yes | 
 |**flow_sampling**| Sampling rate of VPC Flow Logs (0.0 - 1.0) | number | "0.5" | yes| 
-|**metadata**| Metadata logging options | string | "INCLUDE_ALL_METADATA" | yes| 
+|**metadata**| Metadata logging options | string | "INCLUDE_ALL_METADATA" | yes|
+|**enable_shared_vpc**| whether to create shared vpc or not | bool | false | yes|  
 |**service_projects** | List of service projects | list(string) | [ ] | yes|
 |**nats**| List of NAT configurations| list(object) |  | yes | 
 |**routers**| A map of Cloud Routers with region, network, and BGP ASN | map(object) | { } | yes|
