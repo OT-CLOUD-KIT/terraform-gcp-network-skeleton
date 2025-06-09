@@ -7,8 +7,8 @@ module "network-skeleton" {
   aggregation_interval    = var.aggregation_interval
   flow_sampling           = var.flow_sampling
   metadata                = var.metadata
+  enable_shared_vpc       = var.enable_shared_vpc
   service_projects        = var.service_projects
   routers                 = var.routers
   nats                    = var.nats
 }
-

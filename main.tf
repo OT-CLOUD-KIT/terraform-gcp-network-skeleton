@@ -34,12 +34,13 @@ resource "google_compute_subnetwork" "subnet" {
 
 # Shared VPC Host Project
 resource "google_compute_shared_vpc_host_project" "host" {
+  count   = var.enable_shared_vpc ? 1 : 0
   project = var.project_id
 }
 
 # Shared VPC Service Projects
 resource "google_compute_shared_vpc_service_project" "service" {
-  for_each        = toset(var.service_projects)
+  for_each = var.enable_shared_vpc ? toset(var.service_projects) : toset([])
   host_project    = var.project_id
   service_project = each.value
 }
